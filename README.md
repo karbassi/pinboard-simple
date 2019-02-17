@@ -1,6 +1,6 @@
-# Pinboard Simple [![Build Status](https://travis-ci.org/karbassi/pinboard-simple.svg?branch=master)](https://travis-ci.org/karbassi/pinboard-simple) 
+# Pinboard Simple [![Build Status](https://travis-ci.org/karbassi/pinboard-simple.svg?branch=master)](https://travis-ci.org/karbassi/pinboard-simple)
 
-> Google Chrome extension for Pinboard.in (https://pinboard.in).
+> Google Chrome extension for Pinboard.in ([https://pinboard.in](https://pinboard.in)).
 
 ![Pinboard Simple](preview.png)
 
@@ -8,7 +8,7 @@
 
 - Save new bookmarks
 - Quick-save for reading later
-- Save all Tabs 
+- Save all Tabs
 - Selected text automatically copied to description field
 - Keyboard shortcuts (customizable)
 - Customizable menu
