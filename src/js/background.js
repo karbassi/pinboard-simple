@@ -1,7 +1,7 @@
 chrome.commands.onCommand.addListener((command) => {
   if (command === 'save') {
     Pinboard.save();
-  } else if (command === 'saveTabs') {
+  } else if (command === 'save-tabs') {
     Pinboard.saveTabs();
   } else if (command === 'read_later') {
     Pinboard.readLater();
