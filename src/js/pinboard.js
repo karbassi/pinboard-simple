@@ -3,15 +3,22 @@ const BASE_URL = 'https://pinboard.in';
 // eslint-disable-next-line no-unused-vars
 const Pinboard = {
   all() {
-    chrome.tabs.create({ url: BASE_URL });
+    chrome.tabs.create({
+      url: BASE_URL,
+    });
   },
 
   random() {
-    chrome.tabs.create({ url: `${BASE_URL}/random/?type=unread` });
+    chrome.tabs.create({
+      url: `${BASE_URL}/random/?type=unread`,
+    });
   },
 
   readLater() {
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    chrome.tabs.query({
+      active: true,
+      currentWindow: true,
+    }, (tabs) => {
       const tab = tabs[0];
       const url = encodeURIComponent(tab.url);
       const title = encodeURIComponent(tab.title);
@@ -25,11 +32,13 @@ const Pinboard = {
   },
 
   save() {
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    chrome.tabs.query({
+      active: true,
+      currentWindow: true,
+    }, (tabs) => {
       const tab = tabs[0];
       chrome.tabs.executeScript(
-        tab.id,
-        {
+        tab.id, {
           code: 'window.getSelection().toString();',
         },
         (selection) => {
@@ -48,25 +57,38 @@ const Pinboard = {
   },
 
   saveTabs() {
-    chrome.windows.getAll({ populate: true, windowTypes: ['normal'] }, (windows) => {
+    chrome.windows.getAll({
+      populate: true,
+      windowTypes: ['normal'],
+    }, (windows) => {
       const list = [];
       const postData = new FormData();
       const request = new XMLHttpRequest();
 
       for (let i = 0; i < windows.length; i += 1) {
-        const { tabs } = windows[i];
+        const {
+          tabs,
+        } = windows[i];
         const sublist = [];
         for (let j = 0; j < tabs.length; j += 1) {
-          sublist.push({ title: tabs[j].title, url: tabs[j].url });
+          sublist.push({
+            title: tabs[j].title,
+            url: tabs[j].url,
+          });
         }
         list.push(sublist);
       }
-      postData.append('data', JSON.stringify({ browser: 'chrome', windows: list }));
+      postData.append('data', JSON.stringify({
+        browser: 'chrome',
+        windows: list,
+      }));
       request.open('POST', `${BASE_URL}/tabs/save/`, true);
 
       request.onreadystatechange = () => {
         if (request.readyState === 4) {
-          chrome.tabs.create({ url: `${BASE_URL}/tabs/show/` });
+          chrome.tabs.create({
+            url: `${BASE_URL}/tabs/show/`,
+          });
         }
       };
       request.send(postData);
@@ -74,6 +96,8 @@ const Pinboard = {
   },
 
   unread() {
-    chrome.tabs.create({ url: `${BASE_URL}/toread/` });
+    chrome.tabs.create({
+      url: `${BASE_URL}/toread/`,
+    });
   },
 };

@@ -1,5 +1,7 @@
 const restoreOptions = () => {
-  chrome.storage.sync.get({ visibleItems: true }, (options) => {
+  chrome.storage.sync.get({
+    visibleItems: true,
+  }, (options) => {
     Object.keys(options.visibleItems).forEach((key) => {
       document.querySelector(`.js-show-${key}`).checked = options.visibleItems[key];
     });
@@ -22,7 +24,9 @@ const saveOptions = () => {
     visibleItems[item] = document.querySelector(`.js-show-${item}`).checked;
   });
 
-  chrome.storage.sync.set({ visibleItems }, updateStatus());
+  chrome.storage.sync.set({
+    visibleItems,
+  }, updateStatus());
 };
 
 document.addEventListener('DOMContentLoaded', restoreOptions);
