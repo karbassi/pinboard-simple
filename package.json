@@ -16,17 +16,17 @@
     "release": "gulp release"
   },
   "devDependencies": {
-    "eslint": "^5.14.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "gulp": "^4.0.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0",
+    "gulp": "^4.0.2",
     "gulp-chrome-manifest": "0.0.13",
     "gulp-clean": "0.4.0",
     "gulp-htmlmin": "5.0.1",
     "gulp-if": "2.0.2",
     "gulp-uglify-es": "^1.0.4",
     "gulp-useref": "3.1.6",
-    "gulp-zip": "4.2.0"
+    "gulp-zip": "5.0.0"
   },
   "eslintConfig": {
     "extends": "airbnb-base",
