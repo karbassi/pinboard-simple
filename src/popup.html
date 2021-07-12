@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <title>Pinboard Simple</title>
   <meta charset="utf-8">
   <style>
     body {
@@ -20,34 +21,34 @@
       width: 160px;
     }
 
-    .popup-list__item:nth-child(3),
-    .popup-list__item:nth-child(4) {
+    li:nth-child(3),
+    li:nth-child(4) {
       border-bottom: 1px solid #efefef;
       margin-bottom: 3px;
       padding-bottom: 3px;
     }
 
-    .popup-list__item:last-child {
+    li:last-child {
       border-bottom: 0;
       margin-bottom: 0;
     }
 
-    .popup-list__link {
+    a {
       color: #333;
       display: block;
       padding: 5px 8px 5px 0;
       text-decoration: none;
     }
 
-    .popup-list__link:hover {
+    a:hover {
       background: #e0f7fa;
     }
 
-    .popup-list__link:focus {
+    a:focus {
       outline: none
     }
 
-    .popup-list__icon {
+    .icon {
       width: 13px;
       height: 13px;
       margin: 0 5px -2px;
@@ -58,34 +59,34 @@
 
 <body>
   <ul class="popup-list">
-    <li class="popup-list__item js-save">
-      <a class="popup-list__link" href="#">
-        <img class="popup-list__icon" src="images/save.svg"> Save bookmark
+    <li class="js-save">
+      <a href="#">
+        <img class="icon" src="images/save.svg" alt=""> Save bookmark
       </a>
     </li>
-    <li class="popup-list__item js-readLater">
-      <a class="popup-list__link" href="#">
-        <img class="popup-list__icon" src="images/readlater.svg"> Read later
+    <li class="js-readLater">
+      <a href="#">
+        <img class="icon" src="images/read-later.svg" alt=""> Read later
       </a>
     </li>
-    <li class="popup-list__item js-saveTabs">
-      <a class="popup-list__link" href="#">
-        <img class="popup-list__icon" src="images/save.svg"> Save all tabs
+    <li class="js-saveTabs">
+      <a href="#">
+        <img class="icon" src="images/tabs.svg" alt=""> Save all tabs
       </a>
     </li>
-    <li class="popup-list__item js-all">
-      <a class="popup-list__link" href="#">
-        <img class="popup-list__icon" src="images/all.svg"> All bookmarks
+    <li class="js-all">
+      <a href="#">
+        <img class="icon" src="images/all.svg" alt=""> All bookmarks
       </a>
     </li>
-    <li class="popup-list__item js-unread">
-      <a class="popup-list__link" href="#">
-        <img class="popup-list__icon" src="images/unread.svg"> Unread bookmarks
+    <li class="js-unread">
+      <a href="#">
+        <img class="icon" src="images/unread.svg" alt=""> Unread bookmarks
       </a>
     </li>
-    <li class="popup-list__item js-random">
-      <a class="popup-list__link" href="#">
-        <img class="popup-list__icon" src="images/random.svg"> Random unread
+    <li class="js-random">
+      <a href="#">
+        <img class="icon" src="images/random.svg" alt=""> Random unread
       </a>
     </li>
   </ul>

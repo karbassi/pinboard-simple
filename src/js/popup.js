@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector(`.js-${item} a`).addEventListener('click', Pinboard[item]);
   });
 
-  chrome.storage.sync.get({ visibleItems: true }, (options) => {
+  chrome.storage.sync.get({
+    visibleItems: true,
+  }, (options) => {
     if (!options.visibleItems || typeof options.visibleItems !== 'object') {
       return;
     }
