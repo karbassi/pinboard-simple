@@ -5,11 +5,16 @@
   <meta charset="utf-8">
   <title>Pinboard Simple – Options</title>
   <style>
+    body {
+      font-family: system, -apple-system, '.SFNSDisplay-Regular', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      font-size: 13px;
+    }
+
     .popup-menu {
       margin-bottom: 10px;
     }
 
-    .popup-menu__label {
+    .popup-menu label {
       display: block;
       margin: 10px 0;
     }
@@ -28,25 +33,26 @@
 <body>
   <h2>Popup Menu</h2>
   <div class="popup-menu">
-    <label class="popup-menu__label">
+    <label>
       <input type="checkbox" class="js-show-save" checked> Show "Save bookmark"
     </label>
-    <label class="popup-menu__label">
-      <input type="checkbox" class="js-show-readLater" checked> Show "Read later"
+    <label>
+      <input type="checkbox" class="js-show-read-later" checked> Show "Read later"
     </label>
-    <label class="popup-menu__label">
-      <input type="checkbox" class="js-show-saveTabs" checked> Show "Save all tabs"
+    <label>
+      <input type="checkbox" class="js-show-save-tabs" checked> Show "Save all tabs"
     </label>
-    <label class="popup-menu__label">
+    <label>
       <input type="checkbox" class="js-show-all" checked> Show "All bookmarks"
     </label>
-    <label class="popup-menu__label">
+    <label>
       <input type="checkbox" class="js-show-unread" checked> Show "Unread bookmarks"
     </label>
-    <label class="popup-menu__label">
+    <label>
       <input type="checkbox" class="js-show-random" checked> Show "Random unread"
     </label>
   </div>
+
   <div class="js-status"></div>
   <button class="js-save">Save</button>
   <!-- build:js js/options.js -->
